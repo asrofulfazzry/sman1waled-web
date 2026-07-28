@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// User untuk Dashboard Admin
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+  AUTHOR
+}
+
+model Teacher {
+  id          String   @id @default(cuid())
+  nip         String?  @unique // Bisa kosong jika tenaga honorer
+  name        String
+  subject     String   // Mata Pelajaran
+  position    String   // Jabatan
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Article {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  content     String
+  excerpt     String
+  imageUrl    String?
+  category    Category @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Category {
+  id       String    @id @default(cuid())
+  name     String    @unique
+  articles Article[]
+}
+
+
+model News {
+  id        String   @id @default(uuid())
+  title     String
+  category  String
+  excerpt   String
+  date      String
+  createdAt DateTime @default(now())
+}
+
+model Achievement {
+  id          String   @id @default(cuid())
+  title       String
+  category    String
+  description String
+  date        String
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model OrganizationMember {
+  id          String   @id @default(cuid())
+  name        String
+  position    String   // Contoh: Ketua OSIS, Sekretaris MPK, dll.
+  division    String   // "OSIS" atau "MPK"
+  class       String   // Contoh: XI IPA 1
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
