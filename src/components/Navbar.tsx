@@ -14,7 +14,7 @@ export default function Navbar() {
           {/* Wadah logo berwarna putih bersih */}
           <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center bg-white shadow-md p-1">
             <img
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Logo SMAN 1 Waled"
               className="w-full h-full object-contain"
             />
