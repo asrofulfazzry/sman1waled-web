@@ -7,51 +7,48 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* Hero Section dengan Foto sebagai Background Utama */}
-      <section className="relative w-full h-[85vh] min-h-[600px] flex flex-col justify-end pb-12 pt-28 overflow-hidden bg-navy">
-        {/* Background Foto dengan Posisi Fokus yang Pas & Opacity */}
-        <div
-          className="absolute inset-0 w-full h-full z-0 opacity-45"
-          style={{
-            backgroundImage: "url('/images/hero-bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center 20%",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+      {/* Hero Section Modern: Teks Bersih + Banner Foto Utuh */}
+      <section className="relative w-full pt-32 pb-16 bg-navy overflow-hidden">
+        <div className="container mx-auto px-6">
+          {/* Teks Utama */}
+          <div className="max-w-4xl mx-auto text-center mb-10">
+            <div className="inline-block px-4 py-1.5 mb-5 border border-cyan-accent/30 rounded-full bg-navy/30 backdrop-blur-sm shadow-inner">
+              <p className="text-[10px] md:text-xs text-gray-200 font-inter tracking-wide uppercase flex items-center gap-2 justify-center">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-accent opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-accent"></span>
+                </span>
+                Website Resmi SMAN 1 Waled
+              </p>
+            </div>
 
-        {/* Gradient Overlay agar teks terbaca sangat jelas di atas background */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-transparent z-1" />
+            <h2 className="text-3xl md:text-6xl font-bold font-poppins text-white mb-4 leading-tight">
+              Selamat Datang di <br />
+              <span className="text-cyan-accent">SMAN 1 Waled</span>
+            </h2>
 
-        {/* Konten Teks di bagian bawah background */}
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <div className="inline-block px-4 py-1.5 mb-4 border border-cyan-accent/30 rounded-full bg-navy/50 backdrop-blur-sm shadow-inner">
-            <p className="text-[10px] md:text-xs text-gray-200 font-inter tracking-wide uppercase flex items-center gap-2 justify-center">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-accent opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-accent"></span>
-              </span>
-              Website Resmi SMAN 1 Waled
+            <p className="text-sm md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 font-inter leading-relaxed">
+              Mewujudkan generasi berprestasi, berkarakter, dan berwawasan
+              global di era digital.
             </p>
+
+            <Link
+              href="/ppdb"
+              className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-primary text-white font-semibold text-base md:text-lg font-inter shadow-[0_10px_30px_-10px_rgba(0,82,204,0.5)] hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95"
+            >
+              Informasi PPDB
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
+            </Link>
           </div>
 
-          <h2 className="text-3xl md:text-6xl font-bold font-poppins text-white mb-4 leading-tight drop-shadow-lg">
-            Selamat Datang di <br />
-            <span className="text-cyan-accent">SMAN 1 Waled</span>
-          </h2>
-
-          <p className="text-sm md:text-xl text-gray-200 max-w-2xl mx-auto mb-8 font-inter leading-relaxed drop-shadow-md">
-            Mewujudkan generasi berprestasi, berkarakter, dan berwawasan global
-            di era digital.
-          </p>
-
-          <Link
-            href="/ppdb"
-            className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-primary text-white font-semibold text-base md:text-lg font-inter shadow-[0_10px_30px_-10px_rgba(0,82,204,0.5)] hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95"
-          >
-            Informasi PPDB
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
-          </Link>
+          {/* Banner Foto Rapi & Elegan (Dijamin Tidak Terpotong & Wajah Terlihat Jelas di HP) */}
+          <div className="max-w-4xl mx-auto relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 bg-[#050d1a] p-2 md:p-4">
+            <img
+              src="/images/hero-bg.jpg"
+              alt="Keluarga Besar SMAN 1 Waled"
+              className="w-full h-auto rounded-2xl object-cover max-h-[480px]"
+            />
+          </div>
         </div>
       </section>
 
