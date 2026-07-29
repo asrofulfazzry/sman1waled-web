@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* Hero Section dengan Foto sebagai Background Penuh */}
+      {/* Hero Section dengan Background Foto Cerah */}
       <section className="relative w-full h-[90vh] min-h-[650px] flex items-center justify-center text-center overflow-hidden">
         {/* Background Gambar Penuh */}
         <div
@@ -17,13 +17,13 @@ export default function Home() {
           }}
         />
 
-        {/* Dark Gradient Overlay agar teks sangat kontras dan mudah dibaca */}
-        <div className="absolute inset-0 bg-[#050d1a]/80 backdrop-blur-[2px] z-1" />
+        {/* Overlay Tipis agar foto aslinya yang cerah tetap bersinar terang */}
+        <div className="absolute inset-0 bg-[#050d1a]/30 z-1" />
 
-        {/* Konten Hero */}
+        {/* Konten Hero dengan Drop Shadow Kuat pada Teks */}
         <div className="relative z-10 container mx-auto px-6 flex flex-col items-center pt-20">
-          <div className="inline-block px-4 py-1.5 mb-6 border border-cyan-accent/30 rounded-full bg-navy/50 backdrop-blur-md shadow-inner">
-            <p className="text-xs text-gray-200 font-inter tracking-wide uppercase flex items-center gap-2">
+          <div className="inline-block px-4 py-1.5 mb-6 border border-cyan-accent/40 rounded-full bg-navy/60 backdrop-blur-md shadow-lg">
+            <p className="text-xs text-white font-inter tracking-wide uppercase flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-accent opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-accent"></span>
@@ -32,19 +32,21 @@ export default function Home() {
             </p>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold font-poppins text-white mb-6 leading-tight drop-shadow-2xl">
+          <h2 className="text-4xl md:text-6xl font-bold font-poppins text-white mb-6 leading-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
             Selamat Datang di <br />
-            <span className="text-cyan-accent">SMAN 1 Waled</span>
+            <span className="text-cyan-accent drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              SMAN 1 Waled
+            </span>
           </h2>
 
-          <p className="text-base md:text-xl text-gray-200 max-w-3xl mx-auto mb-10 font-inter leading-relaxed font-medium">
+          <p className="text-base md:text-xl text-gray-100 max-w-3xl mx-auto mb-10 font-inter leading-relaxed font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
             Mewujudkan generasi berprestasi, berkarakter, dan berwawasan global
             di era digital.
           </p>
 
           <Link
             href="/ppdb"
-            className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-primary text-white font-semibold text-lg font-inter shadow-[0_10px_30px_-10px_rgba(0,82,204,0.5)] hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95"
+            className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-primary text-white font-semibold text-lg font-inter shadow-[0_10px_30px_-10px_rgba(0,82,204,0.8)] hover:bg-primary/90 transition-all duration-300 hover:scale-105 active:scale-95"
           >
             Informasi PPDB
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
