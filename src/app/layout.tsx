@@ -28,13 +28,8 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${inter.variable} ${poppins.variable}`}>
       <body className="bg-navy text-white font-inter antialiased min-h-screen flex flex-col">
-        {/* Navbar Responsif */}
         <Navbar />
-
-        {/* Konten Utama */}
         <main className="flex-1">{children}</main>
-
-        {/* Footer Global */}
         <footer className="bg-[#050d1a] border-t border-white/10 py-12 text-gray-400 font-inter text-sm">
           <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
