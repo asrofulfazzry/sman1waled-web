@@ -11,11 +11,12 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#050d1a]/90 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center bg-white/10 border border-white/10 shadow-[0_0_15px_rgba(0,82,204,0.5)]">
+          {/* Wadah logo berwarna putih bersih */}
+          <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center bg-white shadow-md p-1">
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="Logo SMAN 1 Waled"
-              className="w-full h-full object-contain p-1"
+              className="w-full h-full object-contain"
             />
           </div>
           <div>
