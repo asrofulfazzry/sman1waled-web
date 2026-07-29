@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center bg-white/10 border border-white/10 shadow-[0_0_15px_rgba(0,82,204,0.5)]">
             <img
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Logo SMAN 1 Waled"
               className="w-full h-full object-contain p-1"
             />
